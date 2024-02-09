@@ -1,8 +1,12 @@
-from django.db import models
-from django.contrib.auth import get_user_model
 
-User = get_user_model()
+from django.db import models
+from login_app.models import CredentialsTable
+# from django.contrib.auth import get_user_model
+#
+# User = get_user_model()
 # Create your models here.
+
+
 
 
 # class UserTable(models.Model):
@@ -30,7 +34,7 @@ class ProductTable(models.Model):
 
 
 class OrderTable(models.Model):
-    username = models.ForeignKey(User, related_name='ordered_by', on_delete=models.CASCADE)
+    username = models.ForeignKey(CredentialsTable, related_name='ordered_by', on_delete=models.CASCADE)
     order_id = models.CharField(max_length=30, unique=True, primary_key=True)
     order = models.CharField(max_length=300)
 

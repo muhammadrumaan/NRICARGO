@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from .models import UserTable
+from .models import CredentialsTable
 
 # Create your views here.
 def login_page(request):
