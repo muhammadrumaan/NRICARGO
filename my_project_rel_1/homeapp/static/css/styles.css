@@ -1,0 +1,47 @@
+/* styles.css */
+
+/* Specify the desired font family */
+body {
+    font-family: 'Your Chosen Font', sans-serif;
+}
+
+/* Grey background styling */
+.grey-background {
+    background-color: #c49d9d; /* Change to your desired grey color */
+    padding: 20px; /* Optional: Add padding to space out the content */
+}
+
+/* Center-align text within boxes */
+.center-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Styling for the main content box */
+.box {
+    /* Fading background color effect */
+    background: linear-gradient(to right, #95c1e9, transparent);
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the contact box */
+.contact-box {
+    /* Fading background color effect */
+    background: linear-gradient(to right, #f7dc6f, transparent);
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Make all text inside .box and .contact-box bold */
+.box p, .box ul, .box li, .contact-box p, .contact-box ul, .contact-box li {
+    margin: 0;
+    font-weight: bold;
+}
