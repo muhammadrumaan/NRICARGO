@@ -1,23 +1,7 @@
 
 from django.db import models
 from login_app.models import CredentialsTable
-# from django.contrib.auth import get_user_model
-#
-# User = get_user_model()
-# Create your models here.
 
-
-
-
-# class UserTable(models.Model):
-#     username = models.CharField(max_length=30, unique=True)
-#     password = models.CharField(max_length=120)
-#
-#     def __str__(self):
-#         return self.username
-#
-#     class Meta:
-#         db_table = 'UserTable'
 
 
 class ProductTable(models.Model):
@@ -34,7 +18,7 @@ class ProductTable(models.Model):
 
 
 class OrderTable(models.Model):
-    username = models.ForeignKey(CredentialsTable, related_name='ordered_by', on_delete=models.CASCADE)
+    user = models.ForeignKey(CredentialsTable, related_name='ordered_by', on_delete=models.CASCADE)
     order_id = models.CharField(max_length=30, unique=True, primary_key=True)
     order = models.CharField(max_length=300)
 
