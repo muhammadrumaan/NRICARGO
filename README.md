@@ -19,7 +19,7 @@ Django,
 HTML, 
 JS, 
 SQLITE, 
-CSS, 
+CSS 
 
 TABLES :
 PRODUCTS,
