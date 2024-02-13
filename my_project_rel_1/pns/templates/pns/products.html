@@ -1,6 +1,39 @@
 {% extends 'pns/basetemplate.html' %}
+{% load static %}
+
+
+
 
 {% block mycontent %}
-<br>
-<br>
+  <div class="container mt-5">
+    <h2>Products</h2>
+    <div class="row">
+      {% for product in products %}
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <img src="{% static 'image/' %}{{product.product_name}}.png" width="256px">
+            <h5 class="card-title">{{ product.product_name }}</h5>
+            <p class="card-text">Price: ${{ product.product_price }}</p>
+            <p class="card-text">Stock: {{ product.product_stock }}</p>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary" type="button" onclick="decreaseQuantity('{{ product.product_name }}')">-</button>
+              </div>
+                      <input type="text" class="form-control quantity-input" id="quantity-{{ product.product_name}}" value="0">
+
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" onclick="increaseQuantity('{{ product.product_name }}')">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <button class="btn btn-primary mb-4" onclick="viewCart()">View Cart</button>
 {% endblock %}
+
+

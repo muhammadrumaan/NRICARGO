@@ -1,0 +1,43 @@
+  
+  
+  
+ <script>
+  var cartItems = {};
+  console.log('Printing');
+
+  function increaseQuantity(productName) {
+    var quantityInput = document.getElementById('quantity-' + productName);
+    var currentValue = parseInt(quantityInput.value);
+    quantityInput.value = currentValue + 1;
+  }
+
+  function decreaseQuantity(productName) {
+    var quantityInput = document.getElementById('quantity-' + productName);
+    var currentValue = parseInt(quantityInput.value);
+    if (currentValue > 1) {
+      quantityInput.value = currentValue - 1;
+    }
+  }
+
+  function viewCart() {
+    var quantityInputs = document.querySelectorAll('.quantity-input');
+    quantityInputs.forEach(function(input) {
+      var productName = input.id.split('-')[1];
+      var quantity = parseInt(input.value);
+      cartItems[productName] = quantity;
+    });
+    document.getElementById('cart-data-input').value = JSON.stringify(cartItems);
+    document.getElementById('cart-form').submit();
+  }
+</script>
+
+
+
+<!--  <form id="cart-form" method="post" action="{% url 'save_cart' %}">-->
+<!--    {% csrf_token %}-->
+<!--    <input type="hidden" id="cart-data-input" name="cart_data">-->
+<!--    {% block mycontent %}-->
+<!--    {% endblock %}-->
+
+
+<!--  </form>-->

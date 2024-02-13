@@ -1,47 +1,94 @@
 /* styles.css */
 
-/* Specify the desired font family */
+/* Specify the desired font family and set text color to white */
 body {
     font-family: 'Your Chosen Font', sans-serif;
+    color: white;
 }
 
 /* Grey background styling */
 .grey-background {
-    background-color: #c49d9d; /* Change to your desired grey color */
+    background-color: #3b3535; /* Replace with your desired color code */
     padding: 20px; /* Optional: Add padding to space out the content */
 }
 
-/* Center-align text within boxes */
-.center-box {
+/* Adjust image size and styling */
+.carousel-item img {
+    max-height: 300px;
+    width: 50%; /* Adjust the width as needed */
+    margin: auto;
+}
+
+/* Adjust container width */
+.carousel-inner {
+    max-width: 700px; /* Set your desired maximum width */
+    margin: auto; /* Center the container */
+}
+
+/* Change background color of active carousel item */
+.carousel-item.active {
+    background-color: #bfd1e0; /* Grey background color */
+}
+
+/* Left-align the list items */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Additional styling for the scrolling box */
+.scrolling-box {
+    height: 301px; /* Set your desired height */
+    max-width: 250px; /* Set your desired maximum width */
+    overflow-y: auto;
+    background-color: #bfd1e0; /* Replace with your desired color code */
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px; /* Adjust margin as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS animation for scrolling contents */
+.scrolling-contents {
+    animation: scrollAnimation 5s linear infinite;
+}
+
+@keyframes scrollAnimation {
+    0% {
+        transform: translateY(-50);
+    }
+    100% {
+        transform: translateY(-5%);
+    }
+}
+
+/* Use flexbox for alignment */
+.main-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
-/* Styling for the main content box */
-.box {
-    /* Fading background color effect */
-    background: linear-gradient(to right, #95c1e9, transparent);
-    border-radius: 8px;
-    padding: 15px;
-    margin-top: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Adjust sizes of center and contact boxes */
+.center-box {
+    flex: 0 0 70%; /* Set your desired percentage */
+    max-width: 70%; /* Set your desired maximum width */
+    padding: 20px;
 }
 
-/* Styling for the contact box */
 .contact-box {
-    /* Fading background color effect */
-    background: linear-gradient(to right, #f7dc6f, transparent);
-    border-radius: 8px;
-    padding: 15px;
+    flex: 0 0 25%; /* Set your desired percentage */
+    max-width: 25%; /* Set your desired maximum width */
+    padding: 20px;
     margin-top: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Make all text inside .box and .contact-box bold */
-.box p, .box ul, .box li, .contact-box p, .contact-box ul, .contact-box li {
-    margin: 0;
-    font-weight: bold;
+.scrolling-box {
+    flex: 0 0 30%; /* Set your desired percentage */
+    max-width: 30%; /* Set your desired maximum width */
+    margin-top: 20px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

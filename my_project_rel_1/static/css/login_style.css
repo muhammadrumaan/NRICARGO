@@ -7,7 +7,7 @@ display : flex;
 flex-direction: column;
 align-items: flex-start;
 justify-content :flex-start;
-grid-gap: 10rem;
+grid-gap: 2.1rem;
 width: 100vw;
 }
 nav {
@@ -136,7 +136,10 @@ input[type='submit'] {
 
 .form input[type='password'],
 .form input[type='text'],
-.form input[type='submit'] {
+.login input[type='email'],
+.form input[type='submit'],
+.login input[type='tel'],
+#login_country {
   width: 100%;
 }
 
@@ -163,7 +166,10 @@ input[type='submit'] {
 .login label,
 .login input[type='text'],
 .login input[type='password'],
-.login input[type='submit'] {
+.login input[type='email'],
+.login input[type='submit'],
+.login input[type='tel'],
+#login_country {
   border-radius: 0.25rem;
   padding: 16px;
   padding: 1rem;
@@ -181,16 +187,25 @@ input[type='submit'] {
 }
 
 .login input[type='password'],
-.login input[type='text'] {
+.login input[type='text'],
+.login input[type='email'],
+.login input[type='tel'],
+#login_country {
   background-color: #434a52;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
 
 .login input[type='password']:focus,
+.login input[type='tel']:focus,
+.login input[type='email']:focus,
 .login input[type='password']:hover,
+.login input[type='tel']:hover,
+.login input[type='email']:hover,
 .login input[type='text']:focus,
-.login input[type='text']:hover {
+.login input[type='text']:hover,
+#login_country:hover,
+ #login_country:focus{
   background-color: #434a52;
 }
 
@@ -227,7 +242,7 @@ p {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   border-top-left-radius:0 ;  #3b4148;
-  
+
 }
 
 .fa.green-tick {
@@ -249,9 +264,26 @@ input[type="submit"][disabled]:hover,input[type="submit"][disabled] {
 
 h2 {
 text-align: center;
-font-size: 1.9rem;
+font-size: 1.3rem;
 }
 
 .div-form {
 width:100%;
+}
+
+#login_country{
+    outline: none;
+    border: none;
+    color: grey;
+}
+svg{
+color:grey;
+}
+.div-form-1 {
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.alert-msg{
+margin-top:1.2rem;
 }

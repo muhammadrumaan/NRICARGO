@@ -11,7 +11,7 @@ class ProductTable(models.Model):
     product_stock = models.DecimalField(max_digits=10, decimal_places=0)
 
     def __str__(self):
-        return self.product_id, self.product_name
+        return  self.product_name
 
     class Meta:
         db_table = 'product_table'
