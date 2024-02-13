@@ -14,16 +14,16 @@ SHOPPING CART AND CHECKOUT:This page shows the selected products and the total a
 
 
 TECHNOLOGIES USED:
-Python 
-Django 
-HTML 
-JS 
-SQLITE 
-CSS 
+Python, 
+Django, 
+HTML, 
+JS, 
+SQLITE, 
+CSS, 
 
 TABLES :
-PRODUCTS
-ORDERS
-USERS
+PRODUCTS,
+ORDERS,
+USERS,
 SHIPPING
 
